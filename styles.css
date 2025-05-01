@@ -1,0 +1,1260 @@
+/* -------------------------------- 
+
+Primary style
+
+-------------------------------- */
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  
+  color: #242322;
+  background-color: #ffffff;
+
+   /* Enable smooth scrolling */
+  scroll-behavior: smooth;
+}
+
+
+/* Customize the scrollbar for WebKit browsers */
+body::-webkit-scrollbar {
+  width: 12px; /* Set scrollbar width */
+}
+
+body::-webkit-scrollbar-track {
+  background: #1a1a1a; /* Dark background for track */
+  border-radius: 8px; /* Rounded track corners */
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #4b0082; /* Darker purple thumb color (Indigo-like) */
+  border-radius: 8px; /* Rounded thumb corners */
+  border: 2px solid #1a1a1a; /* Adds a border to blend thumb with track */
+}
+
+/* Hover effect for scrollbar thumb */
+body::-webkit-scrollbar-thumb:hover {
+  background: #301934; /* Very dark purple hover effect */
+}
+
+/* For non-WebKit browsers */
+body {
+  scrollbar-color: #4b0082 #1a1a1a; /* Thumb color, track color */
+  scrollbar-width: thin; /* Thin scrollbar for macOS-like look */
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+
+
+/* Define the Foldit font for your header */
+.foldit-header {
+  font-family: "Foldit", sans-serif !impo;
+  font-optical-sizing: auto;
+  font-weight: 700; /* Adjust the weight as needed (100 to 900) */
+  font-style: normal;
+}
+
+
+/* -------------------------------- 
+
+Patterns - reusable parts of our design
+
+-------------------------------- */
+
+.glass {
+            display: inline-block;
+            float: right;
+            margin: 10px;
+            background-color: rgba(216, 216, 216, .07);
+            border: solid 1px #5e4b8a; /* Adjust border to complement the gradient */
+            padding: 9px;
+            -webkit-border-radius: 50px;
+            border-radius: 50px;
+            -webkit-box-shadow: inset 0px 4px 4px 0px rgba(0, 0, 0, .3);
+            box-shadow: inset 0px 4px 4px 0px rgba(0, 0, 0, .3);
+            text-decoration: none; /* Prevent underline on links */
+        }
+
+        .glass span {
+    display: inline-block;
+    border-radius: 25px;
+    color: white;
+    border: solid 1px #5e4b8a; /* Adjust border to complement the gradient */
+    padding: 6px 12px;
+    font-size: 12px;
+    text-shadow: 0px -1px 0px #5e4b8a;
+    background: #5e4b8a; /* Fallback for older browsers */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5e4b8a', endColorstr='#d4bfff', GradientType=0); /* For older IE */
+}
+
+.glass:hover span {
+    background: #7856a4; /* Hover fallback */
+    background: linear-gradient(to bottom, #7856a4 0%, #b29ce3 100%); /* Hover gradient */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7856a4', endColorstr='#b29ce3', GradientType=0); /* For older IE */
+}
+
+.cd-btn {
+  display: inline-block;
+  padding: 1.2em 2.0em;
+  font-size: 1.4rem;
+  letter-spacing: .15em;
+  color: #ffffff;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: #a5c4bc;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition: box-shadow 0.3s;
+  -moz-transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+  margin-top: 300px; /* Adjust this value as needed */
+}
+
+
+
+}
+
+
+.nav-buttons {
+  display: flex; /* Use flexbox for alignment */
+  flex-wrap: wrap; /* Wrap if necessary on smaller screens */
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
+  height: 100vh; /* Full viewport height */
+  margin: 0; /* Reset margin */
+  padding: 0; /* Reset padding */
+  gap: 20px; /* Add space between buttons */
+  background: #f8f8f8; /* Optional background for container */
+}
+
+/* Remove unnecessary margins from .raulwwq0-btn */
+.raulwwq0-btn {
+  position: relative; /* Allow individual positioning */
+  cursor: pointer;
+  background: transparent;
+  padding: 15px 30px;
+  outline: none;
+  border: 2px solid #7300ff;
+  width: 150px;
+  height: 60px;
+  text-transform: uppercase;
+  font-weight: 900;
+  text-decoration: none;
+  letter-spacing: 2px;
+  color: #fff;
+  border-radius: 15px; /* Add this to make edges curvy */
+  -webkit-box-reflect: below 0px linear-gradient(transparent, #0002);
+  transition: 0.45s;
+
+}
+
+/* Position each button using left and top */
+.raulwwq0-btn:nth-child(1) {
+  left: 200px; /* Adjust the horizontal position */
+  bottom: -200px; /* Adjust the vertical position */
+}
+
+.raulwwq0-btn:nth-child(2) {
+  left: 350px; /* Adjust for the second button */
+  bottom: -200px;
+}
+
+.raulwwq0-btn:nth-child(3) {
+  left: 500px; /* Adjust for the third button */
+  bottom: -200px;
+}
+
+.raulwwq0-btn:nth-child(4) {
+  left: 650px; /* Adjust for the fourth button */
+  bottom: -200px;
+}
+
+
+
+  
+  .raulwwq0-btn:hover {
+  transition-delay: 0.5s;
+  color: #fff;
+  border-radius: 25px; /* Add this to make edges curvy */
+  transform: translateY(-5px); /* Move the button slightly up on hover */
+
+
+  box-shadow: 0 0 10px #7300ff,
+          0 0 5px #7300ff,
+          0 0 10px #7300ff, 
+          0 0 20px #7300ff, 
+          0 0 40px #7300ff;
+  }
+  
+  .raulwwq0-btn span {
+  position: relative;
+  z-index: 100;
+  }
+  
+  .raulwwq0-btn::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 2px;
+  background: #7300ff;
+  border-radius: 15px; /* Match the button's border radius */
+  box-shadow: 5px -8px 0 #7300ff, 
+        5px 8px 0 #7300ff;
+  transition: width 0.5s, 
+        left 0.5s, 
+        height 0.5s, 
+        box-shadow 0.5s;
+  transition-delay: 0.5s, 0.5s, 0s, 0s;
+  }
+  
+  .raulwwq0-btn:hover::before {
+  width: 60%;
+  height: 100%;
+  left: -2px;
+  box-shadow: 5px 0 0 #7300ff, 
+        5px 0 0 #7300ff;
+  transition-delay: 0s, 0s, 0.5s, 0.5s;
+  }
+  
+  .raulwwq0-btn::after {
+  content: "";
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 2px;
+  background: #7300ff;
+  border-radius: 15px; /* Add this to make edges curvy */
+  box-shadow: -5px -8px 0 #7300ff, 
+        -5px 8px 0 #7300ff;
+  transition: width 0.5s, right 0.5s, height 0.5s, box-shadow 0.5s;
+  transition-delay: 0.5s, 0.5s, 0s, 0s;
+  }
+  
+  .raulwwq0-btn:hover::after {
+  width: 60%;
+  height: 102%;
+  right: -2px;
+  box-shadow: -5px 0 0 #7300ff, -5px 0 0 #7300ff;
+  border-radius: 15px; /* Add this to make edges curvy */
+  transition-delay: 0s, 0s, 0.5s, 0.5s;
+  }
+
+  .raulwwq0-btn2 {
+  cursor: pointer;
+  background: transparent;
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  outline: none;
+  border: 2px solid #7300ff;
+  margin: 40px;
+  width: 150px;
+  height: 60px;
+  text-transform: uppercase;
+  font-weight: 900;
+  text-decoration: none;
+  letter-spacing: 2px;
+  color: #fff;
+
+  border-radius: 15px; /* Add this to make edges curvy */
+  -webkit-box-reflect: below 0px linear-gradient(transparent, #0002);
+  transition: 0.45s;
+  transition-delay: 0s;
+  }
+
+
+  
+  .raulwwq0-btn2:hover {
+  transition-delay: 0.5s;
+  color: #fff;
+  border-radius: 25px; /* Add this to make edges curvy */
+
+
+  box-shadow: 0 0 10px #7300ff,
+          0 0 5px #7300ff,
+          0 0 10px #7300ff, 
+          0 0 20px #7300ff, 
+          0 0 40px #7300ff;
+  }
+  
+  .raulwwq0-btn2 span {
+  position: relative;
+  z-index: 100;
+  }
+  
+  .raulwwq0-btn2::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 2px;
+  background: #7300ff;
+  border-radius: 15px; /* Match the button's border radius */
+  box-shadow: 5px -8px 0 #7300ff, 
+        5px 8px 0 #7300ff;
+  transition: width 0.5s, 
+        left 0.5s, 
+        height 0.5s, 
+        box-shadow 0.5s;
+  transition-delay: 0.5s, 0.5s, 0s, 0s;
+  }
+  
+  .raulwwq0-btn2:hover::before {
+  width: 60%;
+  height: 100%;
+  left: -2px;
+  box-shadow: 5px 0 0 #7300ff, 
+        5px 0 0 #7300ff;
+  transition-delay: 0s, 0s, 0.5s, 0.5s;
+  }
+  
+  .raulwwq0-btn2::after {
+  content: "";
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 2px;
+  background: #7300ff;
+  border-radius: 15px; /* Add this to make edges curvy */
+  box-shadow: -5px -8px 0 #7300ff, 
+        -5px 8px 0 #7300ff;
+  transition: width 0.5s, right 0.5s, height 0.5s, box-shadow 0.5s;
+  transition-delay: 0.5s, 0.5s, 0s, 0s;
+  }
+  
+  .raulwwq0-btn2:hover::after {
+  width: 60%;
+  height: 102%;
+  right: -2px;
+  box-shadow: -5px 0 0 #7300ff, -5px 0 0 #7300ff;
+  border-radius: 15px; /* Add this to make edges curvy */
+  transition-delay: 0s, 0s, 0.5s, 0.5s;
+  }
+
+.no-touch .cd-btn:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.burger-menu {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    z-index: 1000;
+    cursor: pointer;
+    display: none; /* Hide the burger menu by default */
+}
+
+/* Burger Icon */
+.menu-button {
+    width: 50px;
+    height: 50px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+/* Menu Options */
+.menu-options {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease-in-out;
+}
+
+.menu-item {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.5s ease-in-out;
+}
+
+.menu-item:hover {
+    background-color: #555;
+}
+
+/* Active State */
+.menu-options.active {
+    opacity: 1;
+    visibility: visible;
+    bottom: 60%;
+}
+
+.menu-options.active .menu-item {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Ensure buttons stack vertically on smaller screens */
+@media only screen and (max-width: 768px) {
+
+  .button-container {
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center; /* Center them horizontally */
+    gap: 15px; /* Reduce spacing between buttons */
+    height: auto; /* Adjust height to fit content */
+    margin-top: 20px; /* Adjust margin for better positioning */
+  }
+
+  .raulwwq0-btn {
+    position: static; /* Remove absolute positioning for simpler layout */
+    width: 80%; /* Make buttons responsive */
+    max-width: 300px; /* Ensure they don’t grow too large */
+    height: auto; /* Adjust height for text wrapping */
+    padding: 15px; /* Adjust padding for better spacing */
+    font-size: 1.2rem; /* Scale text size for smaller screens */
+  }
+  
+  h1 {
+    font-size: 3rem; /* Adjust heading size for readability */
+    margin-top: 20px; /* Reduce margin to save space */
+  }
+
+  .cd-main-content {
+    height: auto; /* Allow content to adjust based on screen height */
+    padding: 10px; /* Add padding for a cleaner look */
+  }
+
+  /* Hide navigation buttons initially */
+    .nav-buttons {
+        display: none;
+    }
+
+     /* Show burger menu */
+    .burger-menu {
+        display: block;
+    }
+
+
+  .nav-buttons {
+    display: none; /* Hide the nav buttons on small screens *
+   display: flex;              /* Enables Flexbox */
+  justify-content: center;    /* Centers the buttons horizontally */
+  align-items: center;        /* Centers the buttons vertically */
+  gap: 10px;  
+  left: 20px;
+
+  }
+
+      /* When burger menu is clicked, show the navigation buttons */
+    .nav-buttons.active {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        position: fixed;
+        bottom: 0;  /* Position at the bottom */
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #333;
+        padding: 20px;
+        border-radius: 10px;
+        width: 100%;
+    }
+    /* Remove default focus and active styles */
+.raulwwq0-btn:focus,
+.raulwwq0-btn:active {
+    outline: none; /* Remove outline */
+    background-color: transparent; /* Remove background color on active/focus */
+}
+
+    /* Staggered animation: Each button slides in from the bottom */
+    .nav-buttons.active .raulwwq0-btn {
+        animation: slideIn 0.5s ease-out forwards;
+    }
+
+    /* Staggered delay for each button */
+    .nav-buttons.active .raulwwq0-btn:nth-child(1) {
+        animation-delay: 0.1s;
+    }
+    .nav-buttons.active .raulwwq0-btn:nth-child(2) {
+        animation-delay: 0.2s;
+    }
+    .nav-buttons.active .raulwwq0-btn:nth-child(3) {
+        animation-delay: 0.3s;
+    }
+    .nav-buttons.active .raulwwq0-btn:nth-child(4) {
+        animation-delay: 0.4s;
+    }
+    /* Add more nth-child selectors if you have more buttons */
+
+    /* Buttons animation on slide */
+    @keyframes slideIn {
+        to {
+            opacity: 1;
+            transform: translateY(0); /* Slide in from the bottom */
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .burger-menu {
+        display: none;
+    }
+}
+
+
+
+/* -------------------------------- 
+
+Typography
+
+-------------------------------- */
+h1 {
+  font-size: 5rem;
+  line-height: 1;
+  margin-bottom: 1em;
+  font-family: "IM Fell Double Pica", serif;
+  font-style: italic;
+}
+@media only screen and (min-width: 768px) {
+  h1 {
+    font-size: 5rem;
+  }
+
+}
+
+.logo-image {
+    width: 500px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    position: relative; /* Necessary for 'top' to work */
+    top: -70px; /* Adjust vertical position */
+    left: 80px; /* Optional horizontal adjustment */
+}
+
+
+
+@media (max-width: 768px) {
+    .logo-image {
+        width: 300px;
+        top: -35px; /* New top value */
+        left: 0px; /* New top value */
+    }
+}
+@media (max-width: 480px) {
+    .logo-image {
+        width: 200px; /* Smaller width for narrow screens */
+        top: -25px; /* Adjust for spacing */
+        left: 0px; /* Center if necessary */
+    }
+}
+
+
+
+/* -------------------------------- 
+
+Main Content
+
+-------------------------------- */
+.cd-main-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  display: table;
+}
+
+.cd-main-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(28.gif) no-repeat center center;
+  background-size: cover; /* Ensures it covers the whole screen */
+  background-attachment: fixed; /* Prevents scrolling with content */
+  z-index: -1;
+}
+
+
+.cd-main-content::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black overlay */
+  z-index: -1; /* Ensure it’s above the GIF */
+}
+
+.cd-main-content .center {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  z-index: 1; /* Ensure content is above everything */
+  color: white; /* Adjust text color for visibility */
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%; /* Or set a specific height if needed */
+  text-align: center;
+}
+
+.nav-container{
+display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%; /* Or set a specific height if needed */
+  text-align: center;
+}
+
+
+/* -------------------------------- 
+
+Modal window 
+
+-------------------------------- */
+.cd-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: #402f44 url(39.jpg) no-repeat center center;
+  background-size: cover; /* Ensures it covers the whole screen */
+  background-attachment: fixed; /* Prevents scrolling with content */
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+  -moz-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+  transition: opacity 0.3s 0s, visibility 0s 0.3s;
+}
+
+.cd-modal::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black overlay */
+  z-index: -1; /* Ensure it’s above the GIF */
+}
+.cd-modal .modal-content {
+  height: 100%;
+  overflow-y: auto;
+  padding: 3em 5%;
+  color: #e4dcca;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.cd-modal h1 {
+  text-align: center;
+}
+.cd-modal h1::after {
+  /* ink/brush separation */
+  content: '';
+  display: block;
+  width: 130px;
+  height: 18px;
+  background: blue; /* Sets the color */
+  -webkit-mask: url(ink-separation.svg) no-repeat center;
+  mask: url(ink-separation.svg) no-repeat center;
+  background-size: contain;
+  margin: .2em auto 0;
+}
+.cd-modal p {
+  line-height: 1.6;
+  margin: 2em auto;
+  max-width: 800px;
+}
+.cd-modal .modal-close {
+  /* 'X' icon */
+  position: absolute;
+  z-index: 1;
+  top: 20px;
+  right: 5%;
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.3) url(cd-icon-close.svg) no-repeat center center;
+  /* image replacement */
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: -webkit-transform 0.3s 0s, visibility 0s 0.3s, opacity 0.3s 0s;
+  -moz-transition: -moz-transform 0.3s 0s, visibility 0s 0.3s, opacity 0.3s 0s;
+  transition: transform 0.3s 0s, visibility 0s 0.3s, opacity 0.3s 0s;
+}
+.no-touch .cd-modal .modal-close:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.cd-modal.visible {
+  opacity: 1;
+  visibility: visible;
+  z-index: 100; /* Ensure visible modals are on top */
+  transition: opacity 0.3s ease, visibility 0s 0s, z-index 0s 0s;
+}
+.cd-modal.visible .modal-content {
+  /* this fixes the buggy scrolling on webkit browsers - mobile devices only - when overflow property is applied */
+  -webkit-overflow-scrolling: touch;
+}
+.cd-modal.visible .modal-close {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: -webkit-transform 0.3s 0s, visibility 0s 0s, opacity 0.3s 0s;
+  -moz-transition: -moz-transform 0.3s 0s, visibility 0s 0s, opacity 0.3s 0s;
+  transition: transform 0.3s 0s, visibility 0s 0s, opacity 0.3s 0s;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}
+@media only screen and (min-width: 1100px) {
+  .cd-modal .modal-content {
+    padding: 6em 5%;
+  }
+  .cd-modal .modal-close {
+    height: 60px;
+    width: 60px;
+  }
+  .cd-modal p {
+    font-size: 2rem;
+  }
+}
+
+
+.cd-modal2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: #402f44 url(39.jpg) no-repeat center center;
+  background-size: cover; /* Ensures it covers the whole screen */
+  background-attachment: fixed; /* Prevents scrolling with content */
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+  -moz-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+  transition: opacity 0.3s 0s, visibility 0s 0.3s;
+}
+
+.cd-modal2::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black overlay */
+  z-index: -1; /* Ensure it’s above the GIF */
+}
+.cd-modal2 .modal-content {
+  height: 100%;
+  overflow-y: auto;
+  padding: 3em 5%;
+  color: #e4dcca;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.cd-modal2 h1 {
+  text-align: center;
+}
+.cd-modal2 h1::after {
+  /* ink/brush separation */
+  content: '';
+  display: block;
+  width: 130px;
+  height: 18px;
+  background: blue; /* Sets the color */
+  -webkit-mask: url(ink-separation.svg) no-repeat center;
+  mask: url(ink-separation.svg) no-repeat center;
+  background-size: contain;
+  margin: .2em auto 0;
+}
+.cd-modal2 p {
+  line-height: 1.6;
+  margin: 2em auto;
+  max-width: 800px;
+}
+.cd-modal2 .modal-close {
+  /* 'X' icon */
+  position: absolute;
+  z-index: 1;
+  top: 20px;
+  right: 5%;
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.3) url(cd-icon-close.svg) no-repeat center center;
+  /* image replacement */
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: -webkit-transform 0.3s 0s, visibility 0s 0.3s, opacity 0.3s 0s;
+  -moz-transition: -moz-transform 0.3s 0s, visibility 0s 0.3s, opacity 0.3s 0s;
+  transition: transform 0.3s 0s, visibility 0s 0.3s, opacity 0.3s 0s;
+}
+.no-touch .cd-modal2 .modal-close:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.cd-modal2.visible {
+  opacity: 1;
+  visibility: visible;
+  z-index: 100; /* Ensure visible modals are on top */
+  transition: opacity 0.3s ease, visibility 0s 0s, z-index 0s 0s;
+}
+.cd-modal2.visible .modal-content {
+  /* this fixes the buggy scrolling on webkit browsers - mobile devices only - when overflow property is applied */
+  -webkit-overflow-scrolling: touch;
+}
+.cd-modal2.visible .modal-close {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: -webkit-transform 0.3s 0s, visibility 0s 0s, opacity 0.3s 0s;
+  -moz-transition: -moz-transform 0.3s 0s, visibility 0s 0s, opacity 0.3s 0s;
+  transition: transform 0.3s 0s, visibility 0s 0s, opacity 0.3s 0s;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}
+@media only screen and (min-width: 1100px) {
+  .cd-modal2 .modal-content {
+    padding: 6em 5%;
+  }
+  .cd-modal2 .modal-close {
+    height: 60px;
+    width: 60px;
+  }
+  .cd-modal2 p {
+    font-size: 2rem;
+  }
+}
+
+.cd-modal3 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: #402f44 url(39.jpg) no-repeat center center;
+  background-size: cover; /* Ensures it covers the whole screen */
+  background-attachment: fixed; /* Prevents scrolling with content */
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+  -moz-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+  transition: opacity 0.3s 0s, visibility 0s 0.3s;
+}
+
+.cd-modal3::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black overlay */
+  z-index: -1; /* Ensure it’s above the GIF */
+}
+.cd-modal3 .modal-content {
+  height: 100%;
+  overflow-y: auto;
+  padding: 3em 5%;
+  color: #e4dcca;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.cd-modal3 h1 {
+  text-align: center;
+}
+.cd-modal3 h1::after {
+  /* ink/brush separation */
+  content: '';
+  display: block;
+  width: 130px;
+  height: 18px;
+  background: blue; /* Sets the color */
+  -webkit-mask: url(ink-separation.svg) no-repeat center;
+  mask: url(ink-separation.svg) no-repeat center;
+  background-size: contain;
+  margin: .2em auto 0;
+}
+.cd-modal3 p {
+  line-height: 1.6;
+  margin: 2em auto;
+  max-width: 800px;
+}
+.cd-modal3 .modal-close {
+  /* 'X' icon */
+  position: absolute;
+  z-index: 1;
+  top: 20px;
+  right: 5%;
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.3) url(cd-icon-close.svg) no-repeat center center;
+  /* image replacement */
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: -webkit-transform 0.3s 0s, visibility 0s 0.3s, opacity 0.3s 0s;
+  -moz-transition: -moz-transform 0.3s 0s, visibility 0s 0.3s, opacity 0.3s 0s;
+  transition: transform 0.3s 0s, visibility 0s 0.3s, opacity 0.3s 0s;
+}
+.no-touch .cd-modal3 .modal-close:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.cd-modal3.visible {
+  opacity: 1;
+  visibility: visible;
+  z-index: 100; /* Ensure visible modals are on top */
+  transition: opacity 0.3s ease, visibility 0s 0s, z-index 0s 0s;
+}
+.cd-modal3.visible .modal-content {
+  /* this fixes the buggy scrolling on webkit browsers - mobile devices only - when overflow property is applied */
+  -webkit-overflow-scrolling: touch;
+}
+.cd-modal3.visible .modal-close {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: -webkit-transform 0.3s 0s, visibility 0s 0s, opacity 0.3s 0s;
+  -moz-transition: -moz-transform 0.3s 0s, visibility 0s 0s, opacity 0.3s 0s;
+  transition: transform 0.3s 0s, visibility 0s 0s, opacity 0.3s 0s;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}
+@media only screen and (min-width: 1100px) {
+  .cd-modal3 .modal-content {
+    padding: 6em 5%;
+  }
+  .cd-modal3 .modal-close {
+    height: 60px;
+    width: 60px;
+  }
+  .cd-modal3 p {
+    font-size: 2rem;
+  }
+}
+
+.cd-modal4 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: #402f44 url(39.jpg) no-repeat center center;
+  background-size: cover; /* Ensures it covers the whole screen */
+  background-attachment: fixed; /* Prevents scrolling with content */
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+  -moz-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+  transition: opacity 0.3s 0s, visibility 0s 0.3s;
+}
+
+.cd-modal4::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black overlay */
+  z-index: -1; /* Ensure it’s above the GIF */
+}
+.cd-modal4 .modal-content {
+  height: 100%;
+  overflow-y: auto;
+  padding: 3em 5%;
+  color: #e4dcca;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.cd-modal4 h1 {
+  text-align: center;
+}
+.cd-modal4 h1::after {
+  /* ink/brush separation */
+  content: '';
+  display: block;
+  width: 130px;
+  height: 18px;
+  background: blue; /* Sets the color */
+  -webkit-mask: url(ink-separation.svg) no-repeat center;
+  mask: url(ink-separation.svg) no-repeat center;
+  background-size: contain;
+  margin: .2em auto 0;
+}
+.cd-modal4 p {
+  line-height: 1.6;
+  margin: 2em auto;
+  max-width: 800px;
+}
+.cd-modal4 .modal-close {
+  /* 'X' icon */
+  position: absolute;
+  z-index: 1;
+  top: 20px;
+  right: 5%;
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.3) url(cd-icon-close.svg) no-repeat center center;
+  /* image replacement */
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: -webkit-transform 0.3s 0s, visibility 0s 0.3s, opacity 0.3s 0s;
+  -moz-transition: -moz-transform 0.3s 0s, visibility 0s 0.3s, opacity 0.3s 0s;
+  transition: transform 0.3s 0s, visibility 0s 0.3s, opacity 0.3s 0s;
+}
+.no-touch .cd-modal4 .modal-close:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.cd-modal4.visible {
+  opacity: 1;
+  visibility: visible;
+  z-index: 100; /* Ensure visible modals are on top */
+  transition: opacity 0.3s ease, visibility 0s 0s, z-index 0s 0s;
+}
+.cd-modal4.visible .modal-content {
+  /* this fixes the buggy scrolling on webkit browsers - mobile devices only - when overflow property is applied */
+  -webkit-overflow-scrolling: touch;
+}
+.cd-modal4.visible .modal-close {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: -webkit-transform 0.3s 0s, visibility 0s 0s, opacity 0.3s 0s;
+  -moz-transition: -moz-transform 0.3s 0s, visibility 0s 0s, opacity 0.3s 0s;
+  transition: transform 0.3s 0s, visibility 0s 0s, opacity 0.3s 0s;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}
+@media only screen and (min-width: 1100px) {
+  .cd-modal4 .modal-content {
+    padding: 6em 5%;
+  }
+  .cd-modal4 .modal-close {
+    height: 60px;
+    width: 60px;
+  }
+  .cd-modal4 p {
+    font-size: 2rem;
+  }
+}
+
+
+
+
+/* -------------------------------- 
+
+Transition Layer 
+
+-------------------------------- */
+.cd-transition-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+}
+.cd-transition-layer .bg-layer {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateY(-50%) translateX(-2%);
+  -moz-transform: translateY(-50%) translateX(-2%);
+  -ms-transform: translateY(-50%) translateX(-2%);
+  -o-transform: translateY(-50%) translateX(-2%);
+  transform: translateY(-50%) translateX(-2%);
+  /* its dimentions will be overwritten using jQuery to proportionally fit the viewport */
+  height: 100%;
+  /* our sprite is composed of 25 frames */
+  width: 2500%;
+  background: url(ink.png) no-repeat 0 0;
+  background-size: 100% 100%;
+}
+.cd-transition-layer.visible {
+  opacity: 1;
+  visibility: visible;
+}
+.cd-transition-layer.opening .bg-layer {
+  -webkit-animation: cd-sequence 0.8s steps(24);
+  -moz-animation: cd-sequence 0.8s steps(24);
+  animation: cd-sequence 0.8s steps(24);
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.cd-transition-layer.closing .bg-layer {
+  -webkit-animation: cd-sequence-reverse 0.8s steps(24);
+  -moz-animation: cd-sequence-reverse 0.8s steps(24);
+  animation: cd-sequence-reverse 0.8s steps(24);
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.no-cssanimations .cd-transition-layer {
+  display: none;
+}
+
+@-webkit-keyframes cd-sequence {
+  0% {
+    /* translateX(-2%) is used to horizontally center the first frame inside the viewport */
+    -webkit-transform: translateY(-50%) translateX(-2%);
+  }
+  100% {
+    /* translateX(-98%) (2% + 96) is used to horizontally center the last frame inside the viewport  */
+    -webkit-transform: translateY(-50%) translateX(-98%);
+  }
+}
+@-moz-keyframes cd-sequence {
+  0% {
+    /* translateX(-2%) is used to horizontally center the first frame inside the viewport */
+    -moz-transform: translateY(-50%) translateX(-2%);
+  }
+  100% {
+    /* translateX(-98%) (2% + 96) is used to horizontally center the last frame inside the viewport  */
+    -moz-transform: translateY(-50%) translateX(-98%);
+  }
+}
+@keyframes cd-sequence {
+  0% {
+    /* translateX(-2%) is used to horizontally center the first frame inside the viewport */
+    -webkit-transform: translateY(-50%) translateX(-2%);
+    -moz-transform: translateY(-50%) translateX(-2%);
+    -ms-transform: translateY(-50%) translateX(-2%);
+    -o-transform: translateY(-50%) translateX(-2%);
+    transform: translateY(-50%) translateX(-2%);
+  }
+  100% {
+    /* translateX(-98%) (2% + 96) is used to horizontally center the last frame inside the viewport  */
+    -webkit-transform: translateY(-50%) translateX(-98%);
+    -moz-transform: translateY(-50%) translateX(-98%);
+    -ms-transform: translateY(-50%) translateX(-98%);
+    -o-transform: translateY(-50%) translateX(-98%);
+    transform: translateY(-50%) translateX(-98%);
+  }
+}
+@-webkit-keyframes cd-sequence-reverse {
+  0% {
+    -webkit-transform: translateY(-50%) translateX(-98%);
+  }
+  100% {
+    -webkit-transform: translateY(-50%) translateX(-2%);
+  }
+}
+@-moz-keyframes cd-sequence-reverse {
+  0% {
+    -moz-transform: translateY(-50%) translateX(-98%);
+  }
+  100% {
+    -moz-transform: translateY(-50%) translateX(-2%);
+  }
+}
+@keyframes cd-sequence-reverse {
+  0% {
+    -webkit-transform: translateY(-50%) translateX(-98%);
+    -moz-transform: translateY(-50%) translateX(-98%);
+    -ms-transform: translateY(-50%) translateX(-98%);
+    -o-transform: translateY(-50%) translateX(-98%);
+    transform: translateY(-50%) translateX(-98%);
+  }
+  100% {
+    -webkit-transform: translateY(-50%) translateX(-2%);
+    -moz-transform: translateY(-50%) translateX(-2%);
+    -ms-transform: translateY(-50%) translateX(-2%);
+    -o-transform: translateY(-50%) translateX(-2%);
+    transform: translateY(-50%) translateX(-2%);
+  }
+}

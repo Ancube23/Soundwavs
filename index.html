@@ -1,0 +1,1105 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="icon" href="file3.png" type="image/png">
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Faster+One&display=swap" rel="stylesheet">
+
+	
+	<link rel="stylesheet" href="reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="style.css"> <!-- Resource style -->
+	<script src="modernizr.js"></script> <!-- Modernizr -->
+	<!-- Google tag (gtag.js) -->
+  	
+	<title>Soundwavs</title>
+
+	<style>
+    /* Apply the Foldit font to the header */
+.micro-5-charted-regular {
+ font-family: "Faster One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  top: -90px;
+  color: white;
+  text-align: center;  /* Ensure text is centered */
+    font-size: 5rem;     /* Adjust font size if needed */
+
+}
+
+.micro-5-charted-regular:hover {
+  color: #9b4dff; /* Lighter shade on hover */
+}
+
+.micro-5-charted-regular:active {
+  color: #9b4dff; /* Even lighter shade when active */
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap; /* Allows columns to wrap if needed */
+  justify-content: center; /* Centers the columns horizontally */
+  align-items: flex-start; /* Aligns items to the top */
+  gap: 25px; /* Space between columns */
+  width: 90%; /* Adjust width as needed */
+  max-width: 1200px; /* Prevents it from becoming too wide */
+  max-height: 60vh; /* Restricts container height to 80% of the viewport */
+  margin: 0 auto; /* Centers the container on the page */
+  padding: 10px; /* Optional: Adds spacing inside the container */
+}
+
+.left-column,
+.right-column {
+  flex: 1 1 45%; /* Columns take up approximately 45% each */
+  max-height: 100%; /* Prevents columns from exceeding container height */
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  font-weight: bold;
+}
+
+p {
+  margin-top: 5px;
+}
+
+p.fee {
+  font-size: 1.5rem;  /* Larger font for the paragraph */
+  margin-bottom: 2rem;
+  text-align: center;
+  width: 80%; /* Adjust width as needed */
+}
+
+/* Container for the two pricing cards */
+.pricing-container {
+ display: flex;
+  justify-content: center;  /* Center cards horizontally */
+  align-items: center;      /* Center cards vertically (if you want them centered in the viewport) */
+  flex-wrap: wrap;          /* Allow cards to wrap on smaller screens */
+  gap: 45px; 
+}
+
+.contact-container {
+ display: flex;
+  justify-content: center;  /* Center cards horizontally */
+  align-items: center;      /* Center cards vertically (if you want them centered in the viewport) */
+  flex-wrap: wrap;          /* Allow cards to wrap on smaller screens */
+  gap: 45px; 
+}
+
+/* Common styling for both cards */
+.card {
+  border-radius: 15px;
+  padding: 30px;  /* Increased padding inside cards */
+  width: 28%; /* Increased card width */
+  height: 380px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  font-size: 1.2rem; /* Larger font size inside cards */
+  
+  /* Transparent background to allow the blurred content behind the card to show through */
+  background: rgba(255, 255, 255, 0.2); /* Slight transparency */
+  
+  /* Frosted glass effect */
+  backdrop-filter: blur(10px);  /* Apply blur effect to the background behind the card */
+  -webkit-backdrop-filter: blur(10px); /* Safari compatibility */
+}
+
+/* Responsive design: Adjust card width on smaller devices */
+@media (max-width: 768px) {
+  .card {
+    width: 90%;  /* Make cards take up more space on smaller screens */
+  }
+}
+
+/* Common styling for both cards */
+.card2 {
+  border-radius: 15px;
+  padding: 30px;  /* Increased padding inside cards */
+  width: 30%; /* Increased card width */
+  height: 380px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  font-size: 1.2rem; /* Larger font size inside cards */
+  
+  /* Transparent background to allow the blurred content behind the card to show through */
+  background: rgba(255, 255, 255, 0.2); /* Slight transparency */
+  
+  /* Frosted glass effect */
+  backdrop-filter: blur(10px);  /* Apply blur effect to the background behind the card */
+  -webkit-backdrop-filter: blur(10px); /* Safari compatibility */
+}
+
+/* Responsive design: Adjust card width on smaller devices */
+@media (max-width: 768px) {
+  .card2 {
+    width: 90%;  /* Make cards take up more space on smaller screens */
+  }
+}
+
+
+/* Styling for Free Account card */
+.free-account h4 {
+  font-size: 2.3rem;  /* Larger font for card title */
+  margin-bottom: 1rem;
+}
+
+/* Styling for Pro Account card */
+.pro-account h4 {
+  font-size: 2.3rem;  /* Larger font for card title */
+  margin-bottom: 1rem;
+}
+
+/* Bullet points */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.features li {
+  margin: 7px 0;  /* Increased space between list items */
+  font-size: 2rem;  /* Larger font size for list items */
+}
+
+/* Hover effect to slightly elevate cards */
+.card:hover {
+  transform: translateY(-10px);
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .pricing-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .card {
+    width: 80%;  /* Cards take up more width on small screens */
+  }
+}
+
+ .logo-container {
+    position: relative;
+  }
+
+  .logo-container img {
+     width: 500px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    position: relative; /* Necessary for 'top' to work */
+    top: -70px; /* Adjust vertical position */
+    left: 80px; /* Optional horizontal adjustment */
+  }
+
+  .logo-container .reflection {
+    position: absolute;
+    top: 100%; /* Position the reflection below the original */
+    transform: scaleY(-1); /* Flip vertically */
+    opacity: 0.1; /* Make it translucent */
+    top: 465px; /* Adjust vertical position */
+    right: 120px; /* Optional horizontal adjustment */
+  }
+
+  .container-box {
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+}
+
+.input-field {
+    padding: 7px;
+    margin: 7px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid black;
+    box-shadow: 2px 2px 2px 1px #4B0082;
+    width: 250px;
+    max-width: 500px;
+    max-height: 500px;
+    background-color: rgb(236, 227, 227);
+}
+
+.input-field:focus {
+    background-color: white;
+}
+
+#btn-submit:hover {
+    cursor: pointer;
+    background-color: rgb(75, 0, 130);
+}
+
+#btn-reset:hover  {
+    cursor: pointer;
+    background-color: rgb(255, 48, 48);
+}
+
+#form-header {
+  font-size: 15px;
+}
+
+#voice-control {
+            padding: 15px 30px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        #output {
+            margin-top: 70px;
+        font-size: 15px;
+        color: #fff;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        }
+
+        #voice-control:hover {
+        background-color: #6a0dad; /* Dark purple */
+        box-shadow: 0 0 15px 5px rgba(106, 13, 173, 0.7); /* Glowing effect */
+    }
+
+    .sstate {
+    text-align: center;
+
+}
+
+
+  </style>
+</head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7SJ7MVPDZR"></script>
+<script src="https://www.google.com/recaptcha/api.js?render=6LcZJ-gqAAAAABQjDUrIHkjcxCj85WtIu1RKO8Km"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7SJ7MVPDZR');
+</script>
+<body>
+<main class="cd-main-content"><br><br>
+	<!--<div class="center">
+		Willkommen im <h1>memento</h1>
+		<a href="#modal" class="cd-btn cd-modal-trigger" >über uns</a>
+		<a href="#modal1" class="cd-btn cd-modal-trigger" >unser Angebot</a>
+		<a href="#modal2" class="cd-btn cd-modal-trigger">Anfahrt</a>
+		<a href="#modal3" class="cd-btn cd-modal-trigger">Kontakt</a>
+
+
+
+
+	</div>-->
+	<div class="main-header">
+
+		<a href="dashboard/signup.php" class="glass"><span>Sign Up</span></a>
+		<a href="dashboard/login.php" class="glass"><span>Login</span></a>
+
+
+
+	
+<!--<div class="logo-container">-->
+		<centerr><img src="logo2.png" alt="SoundWavs Logo" class="micro-5-charted-regularrr logo-image">
+</centerr>
+<!--<img src="logo2.png" class="reflection" alt="Reflection">
+
+<p>Click the button below and speak to control the website.</p>
+    <button id="voice-control">Start Voice Control</button>
+    <div id="output"></div> </div>-->
+
+		
+
+		
+		<div class="center">
+<button id="voice-control" style="background-color: purple; border: none; padding: 0; border-radius: 40px; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; cursor: pointer; position: fixed; top: 70px; left: 180px;">
+    <img src="voice.png" alt="Microphone" style="width: 30px; height: 30px;">
+</button>
+    <div id="output"></div>
+
+
+		<div class="nav-container">
+			
+
+		<div class="burger-menu" id="burger-icon">
+        ☰
+    </div>
+    <div class="nav-buttons">
+<button class="raulwwq0-btn cd-modal-trigger1 nav-item" data-modal-id="about-modal"><span>About</span></button>
+<button class="raulwwq0-btn cd-modal-trigger2 nav-item" data-modal-id="features-modal"><span>Features</span></button>
+<button class="raulwwq0-btn cd-modal-trigger3 nav-item" data-modal-id="pricing-modal"><span>Pricing</span></button>
+<button class="raulwwq0-btn cd-modal-trigger4 nav-item" data-modal-id="contact-modal"><span>Contact</span></button>
+    </div>
+
+</div>
+<p style="position: absolute; bottom: 10px; left: 0; font-size: 12px; width: 100%; text-align: center;">
+  <a href="https://soundwavs.com/dashboard/terms.html" target="_blank">Terms & Conditions</a>
+</p>
+
+
+</div>
+</div>
+
+
+
+
+	
+
+
+            
+</main> <!-- .cd-main-content -->
+
+<!-- About Modal -->
+<div class="cd-modal" id="about-modal">
+  <div class="modal-content">
+    <h1>About Us</h1>
+    <p>Welcome to Soundwavs, your ultimate destination for innovative audio tools powered by AI. Our platform is designed to revolutionize how you create and manipulate sound, offering a seamless experience for users of all skill levels.
+
+From generating full songs or melodies with just a text prompt to separating audio stems or mastering tracks online, we provide a diverse range of features tailored to meet your creative needs. Whether you're a content creator looking to produce original sounds or a musician seeking efficient audio solutions, Soundwavs empowers you to turn your imagination into reality.
+
+We understand the complexities of navigating copyright restrictions on popular social platforms, so we've made it easier than ever for you to craft unique, royalty-free audio that’s truly your own. With Soundwavs, creativity knows no bounds.</p>
+  </div>
+  <a href="#0" class="modal-close" onclick="closeModal('about-modal')">Close</a>
+</div>
+
+<!-- Features Modal -->
+<div class="cd-modal2" id="features-modal">
+  <div class="modal-content">
+    <h1>Features</h1>
+    <center><div class="container">
+  <div class="left-column">
+  <ul class="features">
+    <li><strong>Song Generator</strong></li>
+    <p>Create your own songs by simply typing out some lyrics and providing the genre you would like generated</p>
+
+    <li><strong>Vocal Separation</strong></li>
+    <p>Effortlessly separate vocals and instrumentals to remix or refine your favorite tracks.</p>
+
+    <li><strong>Text To Audio Generation</strong></li>
+    <p>Turn your words into melodies or soundscapes with our powerful AI-driven tools.</p>
+
+  </ul>
+</div>
+<div class="right-column">
+  <ul class="features">
+    <li><strong>Vocal Simulation</strong></li>
+    <p>Create lifelike vocal tracks inspired by your favorite artists, perfect for custom projects.</p>
+
+     <li><strong>Online Audio Mastering</strong></li>
+    <p>Polish your audio tracks with professional-quality mastering directly in your browser.</p>
+
+    <li><strong>Audio/Video Converter</strong></li>
+    <p>Easily convert audio and video files into your preferred formats in just a few clicks.</p>
+
+   
+
+  </ul>
+
+</div>
+
+<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+    <li style="list-style: none;"><strong></strong></li> 
+    <p class="state">Many more to come!</p>
+</div>
+
+
+</div></center>
+
+  </div>
+  <a href="#0" class="modal-close" onclick="closeModal('features-modal')">Close</a>
+</div>
+
+<!-- Pricing Modal -->
+<div class="cd-modal3" id="pricing-modal">
+  <div class="modal-content">
+    <h1>Pricing</h1>
+
+<center><div class="pricing-container">
+  <div class="card free-account">
+    <h4>Free Account</h4><br><br>
+    <ul>
+      <li><b>SONG GENERATION</b><br> 3 Downloads Daily<br>
+      20 Downlods Monthly</li><br>
+      <li><b>VOCAL SEPARATION</b><br> 5 Downloads Daily<br>
+      30 Downlods Monthly</li><br>
+      <li>TEXT TO AUDIO GENERATION<br> 3 Downloads Daily<br>
+      20 Downlods Monthly</li><br>
+      <li>VOCAL SIMULATION<br> 3 Downloads Daily<br>
+      20 Downlods Monthly</li><br>
+      <li>ONLINE AUDIO MASTERING<br> 5 Downloads Daily<br>
+      30 Downlods Monthly</li><br>
+      <li>AUDIO/VIDEO CONVERTER<br> Unlimited (1 GB Monthly)</li><br>
+    </ul>
+  </div>
+  
+  <div class="card pro-account">
+    <h4>Pro Account ($10 a month)</h4><br><br>
+    <ul>
+      <li><b>SONG GENERATION</b><br> 10 Downloads Daily<br>
+      70 Downlods Monthly</li><br>
+      <li><b>VOCAL SEPARATION</b><br> 20 Downloads Daily<br>
+      100 Downlods Monthly</li><br>
+      <li>TEXT TO AUDIO GENERATION<br> 10 Downloads Daily<br>
+      70 Downlods Monthly</li><br>
+      <li>VOCAL SIMULATION<br> 10 Downloads Daily<br>
+      70 Downlods Monthly</li><br>
+      <li>ONLINE AUDIO MASTERING<br> 20 Downloads Daily<br>
+      100 Downlods Monthly</li><br>
+      <li>AUDIO/VIDEO CONVERTER<br> Unlimited (5 GB Monthly) </li><br>
+    </ul>
+  </div>
+</div></center>
+
+  </div>
+  <a href="#0" class="modal-close" onclick="closeModal('pricing-modal')">Close</a>
+</div>
+
+<!-- Contact Modal -->
+<div class="cd-modal4" id="contact-modal">
+  <div class="modal-content">
+    <h1>Contact Us</h1>
+    <div class="contact-container">
+<p id="form-header"><a href='mailto:support@soundwavs.com'>support@soundwavs.com</a></p>
+    	<div class="card2">
+    <div class="container-form">
+    <h3 id="form-header">Fill In The Form</h3>
+    
+    <form id="contact_form">
+        <input type="text" class="input-field" name="name" placeholder="Your name" required><br>
+        <input type="email" class="input-field" name="email" placeholder="Your Email Address" required><br>
+        <input type="tel" class="input-field" name="whatsapp_number" placeholder="Your Phone Number" maxlength="10" required><br>
+        <textarea name="message" class="input-field" placeholder="Your Message" required></textarea><br><br>
+
+<input type="hidden" name="recaptcha_token" id="recaptcha_token">
+        
+        <input type="submit" id="btn-submit" class="input-field" value="Send Message"><br>
+        <input type="reset" id="btn-reset" class="input-field" value="Clear All">
+    </form>
+
+    <p id="form-response"></p> <!-- This will show the response message -->
+</div>
+
+</div>
+ <p id="form-header">+27682028812</p>
+
+  </div>
+  <a href="#0" class="modal-close" onclick="closeModal('contact-modal')">Close</a>
+</div>
+</div>
+
+
+
+ <!-- 
+<div class="cd-modal1" id="modal1">
+	<div class="modal-content1">
+		<h1>memento ist Leidenschaft</h1>
+		
+		<p>
+			Wie heißen Sie herzlich willkommen auf unserer Website und wünschen Ihnen viel Spaß beim stöbern. 
+		</p>
+
+		<p>
+			Rezan der Besitzer looooooooooooooooooooooooooooooooo
+		</p>
+	</div> 
+		<a href="#0" class="modal-close1">schließen</a>
+</div> 
+-->
+
+
+
+<div class="cd-transition-layer"> 
+	<div class="bg-layer"></div>
+</div> <!-- .cd-transition-layer -->
+
+
+<div class="cd-transition-layer1"> 
+	<div class="bg-layer1"></div>
+</div> <!-- .cd-transition-layer -->
+	
+<script src="jquery-2.1.4.js"></script>
+<script src="main.js"></script> <!-- Resource jQuery -->
+<script>
+
+document.getElementById('burger-icon').addEventListener('click', function () {
+    const navButtons = document.querySelector('.nav-buttons');
+    navButtons.classList.toggle('active');
+
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Trigger SVG effect and open modal
+    document.querySelectorAll('[data-modal-id]').forEach(button => {
+        button.addEventListener('click', function (event) {
+            event.preventDefault();
+            const modalId = this.getAttribute('data-modal-id');
+            console.log(`Opening modal: ${modalId}`);
+            openModal(modalId);
+        });
+    });
+
+    // Close modal functionality
+    document.querySelectorAll('.modal-close').forEach(closeButton => {
+        closeButton.addEventListener('click', function (event) {
+            event.preventDefault();
+            const modal = this.closest('.cd-modal, .cd-modal2, .cd-modal3, .cd-modal4');
+            if (modal) {
+                closeModal(modal.id);
+            }
+        });
+    });
+});
+
+// Unified openModal function
+function openModal(modalId) {
+    // Hide all modals
+    const modalSelectors = ['.cd-modal', '.cd-modal2', '.cd-modal3', '.cd-modal4'];
+    document.querySelectorAll(modalSelectors.join(',')).forEach(modal => {
+        modal.classList.remove('visible');
+    });
+
+    // Trigger SVG effect and show modal
+    startSVGEffect().then(() => {
+        const modal = document.getElementById(modalId);
+        if (modal) {
+            modal.classList.add('visible');
+            console.log(`Modal ${modalId} is now visible.`);
+        } else {
+            console.error(`Modal with ID "${modalId}" not found.`);
+        }
+    });
+}
+
+// Unified closeModal function
+function closeModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.classList.remove('visible');
+        console.log(`Modal ${modalId} is now hidden.`);
+    }
+}
+
+// Unified SVG effect function
+function startSVGEffect() {
+    return new Promise(resolve => {
+        const transitionLayer = document.querySelector('.cd-transition-layer');
+        if (transitionLayer) {
+            transitionLayer.classList.add('visible', 'opening');
+            setTimeout(() => {
+                transitionLayer.classList.remove('opening');
+                console.log('SVG effect complete.');
+                resolve();
+            }, 1000); // 1 second for the SVG effect
+        } else {
+            console.warn('Transition layer not found. Skipping SVG effect.');
+            resolve();
+        }
+    });
+}
+
+// Handle the form submission
+document.getElementById('contact_form').addEventListener('submit', function(e) {
+    e.preventDefault(); // Prevent the form from submitting normally
+
+    grecaptcha.ready(function() {
+        grecaptcha.execute('6LcZJ-gqAAAAABQjDUrIHkjcxCj85WtIu1RKO8Km', {action: 'submit'}).then(function(token) {
+            // Append the token to the form data
+            var formData = new FormData(document.getElementById('contact_form'));
+            formData.append('g-recaptcha-response', token);
+
+            // Send the form data via AJAX
+            fetch('submit_form.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json()) // Parse JSON response
+            .then(data => {
+                if (data.status === 'success') {
+                    alert(data.message); // Show success message
+                } else {
+                    alert("Error: " + data.message); // Show error message
+                }
+            })
+            .catch(error => {
+                alert("Error: There was an issue with the form submission.");
+                console.error('Error:', error);
+            });
+        });
+    });
+});
+
+
+
+
+</script>
+
+<script>
+       const voiceControlButton = document.getElementById("voice-control");
+const outputDiv = document.getElementById("output");
+
+const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+if (!SpeechRecognition) {
+    outputDiv.textContent = "Your browser does not support speech recognition. Please use Chrome or Edge.";
+    voiceControlButton.disabled = true;
+} else {
+    const recognition = new SpeechRecognition();
+    recognition.continuous = false;
+    recognition.interimResults = false;
+    recognition.lang = "en-US";
+
+    voiceControlButton.addEventListener("click", () => {
+        recognition.start();
+        outputDiv.textContent = "Listening...";
+    });
+
+    recognition.onresult = (event) => {
+        const transcript = event.results[0][0].transcript.toLowerCase();
+        outputDiv.textContent = `You said: ${transcript}`;
+        processVoiceCommand(transcript);
+    };
+
+    recognition.onerror = (event) => {
+        outputDiv.textContent = `Error: ${event.error}`;
+        speak(`Error: ${event.error}`);
+    };
+
+    recognition.onend = () => {
+        outputDiv.textContent = "Voice recognition ended.";
+    };
+}
+
+function processVoiceCommand(command) {
+    if (command.includes("open about")) {
+        document.querySelector(".cd-modal-trigger1").click();
+        speak("Opening about section.");
+        } else if (command.includes("open about us")) {
+        document.querySelector(".cd-modal-trigger1").click();
+        speak("Opening about section.");
+        } else if (command.includes("open about us page")) {
+        document.querySelector(".cd-modal-trigger1").click();
+        speak("Opening about section.");
+        } else if (command.includes("open about us page button")) {
+        document.querySelector(".cd-modal-trigger1").click();
+        speak("Opening about section.");
+      } else if (command.includes("click about")) {
+        document.querySelector(".cd-modal-trigger1").click();
+        speak("Opening abouts section.");
+        } else if (command.includes("click about us")) {
+        document.querySelector(".cd-modal-trigger1").click();
+        speak("Opening about section.");
+      } else if (command.includes("click about us page")) {
+        document.querySelector(".cd-modal-trigger1").click();
+        speak("Opening about section.");
+      } else if (command.includes("click about us button")) {
+        document.querySelector(".cd-modal-trigger1").click();
+        speak("Opening about section.");
+
+} else if (command.includes("open features")) {
+        document.querySelector(".cd-modal-trigger2").click();
+        speak("Opening features section.");
+        } else if (command.includes("open features button")) {
+        document.querySelector(".cd-modal-trigger2").click();
+        speak("Opening features section.");
+        } else if (command.includes("open features page")) {
+        document.querySelector(".cd-modal-trigger2").click();
+        speak("Opening features section.");
+        } else if (command.includes("features")) {
+        document.querySelector(".cd-modal-trigger2").click();
+        speak("Opening features section.");
+      } else if (command.includes("features screen")) {
+        document.querySelector(".cd-modal-trigger2").click();
+        speak("Opening features section.");
+        } else if (command.includes("open page with features")) {
+        document.querySelector(".cd-modal-trigger2").click();
+        speak("Opening features section.");
+      } else if (command.includes("open features page")) {
+        document.querySelector(".cd-modal-trigger2").click();
+        speak("Opening features section.");
+        } else if (command.includes("click features")) {
+        document.querySelector(".cd-modal-trigger2").click();
+        speak("Opening features section.");
+        } else if (command.includes("click features button")) {
+        document.querySelector(".cd-modal-trigger2").click();
+        speak("Opening features section.");
+        } else if (command.includes("features page")) {
+        document.querySelector(".cd-modal-trigger2").click();
+        speak("Opening features section.");
+        } else if (command.includes("features")) {
+        document.querySelector(".cd-modal-trigger2").click();
+        speak("Opening features section.");
+
+        
+        } else if (command.includes("open pricing")) {
+        document.querySelector(".cd-modal-trigger3").click();
+        speak("Opening pricings section.");
+        } else if (command.includes("open pricing button")) {
+        document.querySelector(".cd-modal-trigger3").click();
+        speak("Opening pricing section.");
+        } else if (command.includes("open pricing page")) {
+        document.querySelector(".cd-modal-trigger3").click();
+        speak("Opening pricing section.");
+        } else if (command.includes("pricing")) {
+        document.querySelector(".cd-modal-trigger3").click();
+        speak("Opening pricing section.");
+      } else if (command.includes("pricing screen")) {
+        document.querySelector(".cd-modal-trigger3").click();
+        speak("Opening pricings section.");
+        } else if (command.includes("open page with pricing")) {
+        document.querySelector(".cd-modal-trigger3").click();
+        speak("Opening pricing section.");
+      } else if (command.includes("open page with prices")) {
+        document.querySelector(".cd-modal-trigger3").click();
+        speak("Opening pricing section.");
+      } else if (command.includes("click pricing")) {
+        document.querySelector(".cd-modal-trigger3").click();
+        speak("Opening pricing section.");
+        } else if (command.includes("click pricing button")) {
+        document.querySelector(".cd-modal-trigger3").click();
+        speak("Opening pricing section.");
+        } else if (command.includes("click pricing page")) {
+        document.querySelector(".cd-modal-trigger3").click();
+        speak("Opening pricing section.");
+        } else if (command.includes("click pricing")) {
+        document.querySelector(".cd-modal-trigger3").click();
+        speak("Opening pricing section.");
+      } else if (command.includes("click pricing screen")) {
+        document.querySelector(".cd-modal-trigger3").click();
+        speak("Opening pricing section.");
+        } else if (command.includes("click page with pricing")) {
+        document.querySelector(".cd-modal-trigger3").click();
+        speak("Opening pricing section.");
+      } else if (command.includes("click page with prices")) {
+        document.querySelector(".cd-modal-trigger3").click();
+        speak("Opening pricing section.");
+
+                } else if (command.includes("open contact")) {
+        document.querySelector(".cd-modal-trigger2").click();
+        speak("Opening contact section.");
+        } else if (command.includes("open contact button")) {
+        document.querySelector(".cd-modal-trigger2").click();
+        speak("Opening contact section.");
+        } else if (command.includes("open contact page")) {
+        document.querySelector(".cd-modal-trigger2").click();
+        speak("Opening contact section.");
+        } else if (command.includes("contact")) {
+        document.querySelector(".cd-modal-trigger2").click();
+        speak("Opening contact section.");
+      } else if (command.includes("contact screen")) {
+        document.querySelector(".cd-modal-trigger2").click();
+        speak("Opening contact section.");
+        } else if (command.includes("open page with contact")) {
+        document.querySelector(".cd-modal-trigger2").click();
+        speak("Opening contact section.");
+      } else if (command.includes("open page with contact us")) {
+        document.querySelector(".cd-modal-trigger2").click();
+        speak("Opening contact section.");
+      } else if (command.includes("click pricing")) {
+        document.querySelector(".cd-modal-trigger2").click();
+        speak("Opening contact section.");
+        } else if (command.includes("click pricing button")) {
+        document.querySelector(".cd-modal-trigger2").click();
+        speak("Opening contact section.");
+        } else if (command.includes("click contact page")) {
+        document.querySelector(".cd-modal-trigger2").click();
+        speak("Opening contact section.");
+        } else if (command.includes("click contact")) {
+        document.querySelector(".cd-modal-trigger2").click();
+        speak("Opening contact section.");
+      } else if (command.includes("click contact screen")) {
+        document.querySelector(".cd-modal-trigger2").click();
+        speak("Opening contact section.");
+        } else if (command.includes("click page with contact")) {
+        document.querySelector(".cd-modal-trigger2").click();
+        speak("Opening contacts section.");
+      } else if (command.includes("click page with contact us")) {
+        document.querySelector(".cd-modal-trigger2").click();
+        speak("Opening contact section.");
+        } else if (command.includes("open contact us")) {
+        document.querySelector(".cd-modal-trigger2").click();
+        speak("Opening contact section.");
+        } else if (command.includes("open page with contact us")) {
+        document.querySelector(".cd-modal-trigger2").click();
+        speak("Opening contact section.");
+
+        } else if (command.includes("sign up")) {
+        window.location.href = "dashboard/signup.php";
+        speak("Redirecting to sign up page.");
+        } else if (command.includes("open sign up button")) {
+        window.location.href = "dashboard/signup.php";
+        speak("Redirecting to sign up page.");
+        } else if (command.includes("open sign up page")) {
+        window.location.href = "dashboard/signup.php";
+        speak("Redirecting to sign up page.");
+        } else if (command.includes("click sign up")) {
+        window.location.href = "dashboard/signup.php";
+        speak("Redirecting to sign up page.");
+      } else if (command.includes("sign up screen")) {
+       window.location.href = "dashboard/signup.php";
+        speak("Redirecting to sign up page.");
+        } else if (command.includes("open page with sign up")) {
+        window.location.href = "dashboard/signup.php";
+        speak("Redirecting to sign up page.");
+      } else if (command.includes("open registration page")) {
+        dwindow.location.href = "dashboard/signup.php";
+        speak("Redirecting to sign up page.");
+      } else if (command.includes("registration page")) {
+       window.location.href = "dashboard/signup.php";
+        speak("Redirecting to sign up page.");
+        } else if (command.includes("click sign up")) {
+        window.location.href = "dashboard/signup.php";
+        speak("Redirecting to sign up page.");
+        } else if (command.includes("click sign up page")) {
+        window.location.href = "dashboard/signup.php";
+        speak("Redirecting to sign up page.");
+        } else if (command.includes("click sign up button")) {
+        window.location.href = "dashboard/signup.php";
+        speak("Redirecting to sign up page.");
+      } else if (command.includes("sign up form")) {
+        window.location.href = "dashboard/signup.php";
+        speak("Redirecting to sign up page.");
+        } else if (command.includes("sign me up")) {
+        window.location.href = "dashboard/signup.php";
+        speak("Redirecting to sign up page.");
+        } else if (command.includes("take me to the sign up page")) {
+        window.location.href = "dashboard/signup.php";
+        speak("Redirecting to sign up page.");
+      } else if (command.includes("go to sign up page")) {
+        window.location.href = "dashboard/signup.php";
+        speak("Redirecting to sign up page.")
+      } else if (command.includes("go to sign up")) {
+        window.location.href = "dashboard/signup.php";
+        speak("Redirecting to sign up page.")
+
+
+        } else if (command.includes("log in")) {
+        window.location.href = "dashboard/login.php";
+        speak("Redirecting to login page.");
+        } else if (command.includes("open log in button")) {
+        window.location.href = "dashboard/login.php";
+        speak("Redirecting to login page.");
+        } else if (command.includes("open log in page")) {
+        window.location.href = "dashboard/login.php";
+        speak("Redirecting to login page.");
+        } else if (command.includes("click log in")) {
+        window.location.href = "dashboard/login.php";
+        speak("Redirecting to login page.");
+      } else if (command.includes("log in screen")) {
+       window.location.href = "dashboard/login.php";
+        speak("Redirecting to login page.");
+        } else if (command.includes("open page with log in")) {
+        window.location.href = "dashboard/login.php";
+        speak("Redirecting to login page.");
+      } else if (command.includes("open log in page")) {
+        window.location.href = "dashboard/login.php";
+        speak("Redirecting to login page.");
+      } else if (command.includes("dashboard")) {
+       window.location.href = "dashboard/login.php";
+        speak("Redirecting to login page.");
+        } else if (command.includes("log me in")) {
+       window.location.href = "dashboard/login.php";
+        speak("Redirecting to login page.");
+        } else if (command.includes("click log in page")) {
+        window.location.href = "dashboard/login.php";
+        speak("Redirecting to login page.");
+        } else if (command.includes("I want to log in")) {
+        window.location.href = "dashboard/login.php";
+        speak("Redirecting to login page.");
+      } else if (command.includes("log in form")) {
+        window.location.href = "dashboard/login.php";
+        speak("Redirecting to login page.");
+        } else if (command.includes("click log in button")) {
+        window.location.href = "dashboard/login.php";
+        speak("Redirecting to login page.");
+      } else if (command.includes("take me to the log in page")) {
+        window.location.href = "dashboard/login.php";
+        speak("Redirecting to login page.");
+      } else if (command.includes("go to log in page")) {
+        window.location.href = "dashboard/login.php";
+        speak("Redirecting to login page.");
+      } else if (command.includes("go to log in")) {
+        window.location.href = "dashboard/login.php";
+        speak("Redirecting to login page.");
+
+      } else if (command.includes("login")) {
+        window.location.href = "dashboard/login.php";
+        speak("Redirecting to login page.");
+        } else if (command.includes("open login button")) {
+        window.location.href = "dashboard/login.php";
+        speak("Redirecting to login page.");
+        } else if (command.includes("open login page")) {
+        window.location.href = "dashboard/login.php";
+        speak("Redirecting to login page.");
+        } else if (command.includes("click login")) {
+        window.location.href = "dashboard/login.php";
+        speak("Redirecting to login page.");
+      } else if (command.includes("login screen")) {
+       window.location.href = "dashboard/login.php";
+        speak("Redirecting to login page.");
+        } else if (command.includes("open page with login")) {
+        window.location.href = "dashboard/login.php";
+        speak("Redirecting to login page.");
+      } else if (command.includes("open login page")) {
+        window.location.href = "dashboard/login.php";
+        speak("Redirecting to login page.");
+        } else if (command.includes("click login page")) {
+        window.location.href = "dashboard/login.php";
+        speak("Redirecting to login page.");
+        } else if (command.includes("I want to login")) {
+        window.location.href = "dashboard/login.php";
+        speak("Redirecting to login page.");
+      } else if (command.includes("login form")) {
+        window.location.href = "dashboard/login.php";
+        speak("Redirecting to login page.");
+        } else if (command.includes("click login button")) {
+        window.location.href = "dashboard/login.php";
+        speak("Redirecting to login page.");
+      } else if (command.includes("take me to the login page")) {
+        window.location.href = "dashboard/login.php";
+        speak("Redirecting to login page.");
+      } else if (command.includes("go to login page")) {
+        window.location.href = "dashboard/login.php";
+        speak("Redirecting to login page.");
+      } else if (command.includes("go to login")) {
+        window.location.href = "dashboard/login.php";
+        speak("Redirecting to login page.");
+
+      } else if (command.includes("open terms")) {
+        window.location.href = "dashboard/terms.html";
+        speak("Opening terms.");
+      } else if (command.includes("click terms")) {
+        window.location.href = "dashboard/terms.html";
+        speak("Opening terms.");
+      } else if (command.includes("view terms")) {
+        window.location.href = "dashboard/terms.html";
+        speak("Opening terms..");
+        } else if (command.includes("open terms and conditions")) {
+        window.location.href = "dashboard/terms.html";
+        speak("Opening terms.");
+        } else if (command.includes("click terms and conditions")) {
+        window.location.href = "dashboard/terms.html";
+        speak("Opening terms.");
+      } else if (command.includes("view terms and conditions")) {
+        window.location.href = "dashboard/terms.html";
+        speak("Opening terms.");
+
+
+    } else if (command.includes("what is sound waves")) {
+        speak("SoundWAVs is an AI-powered platform offering vocal separation, text-to-audio generation, vocal simulation, online audio mastering, and audio-video conversion.");
+        } else if (command.includes("tell me about sound waves")) {
+        speak("SoundWAVs is an AI-powered platform offering vocal separation, text-to-audio generation, vocal simulation, online audio mastering, and audio-video conversion.");
+        } else if (command.includes("about sound waves")) {
+        speak("SoundWAVs is an AI-powered platform offering vocal separation, text-to-audio generation, vocal simulation, online audio mastering, and audio-video conversion.");
+        } else if (command.includes("about the website")) {
+        speak("SoundWAVs is an AI-powered platform offering vocal separation, text-to-audio generation, vocal simulation, online audio mastering, and audio-video conversion.");
+      } else if (command.includes("what is the website about")) {
+        speak("SoundWAVs is an AI-powered platform offering vocal separation, text-to-audio generation, vocal simulation, online audio mastering, and audio-video conversion.");
+
+
+    } else if (command.includes("what features do you have")) {
+        speak("SoundWAVs provides features like AI-powered vocal separation, professional-grade online mastering, text-to-music generation, vocal simulation, and audio-video conversion.");
+        } else if (command.includes("what do you offer")) {
+        speak("SoundWAVs provides features like AI-powered vocal separation, professional-grade online mastering, text-to-music generation, vocal simulation, and audio-video conversion.");
+        } else if (command.includes("how does it work")) {
+        speak("SoundWAVs provides features like AI-powered vocal separation, professional-grade online mastering, text-to-music generation, vocal simulation, and audio-video conversion.");
+        } else if (command.includes("what features does sound waevs have")) {
+        speak("SoundWAVs provides features like AI-powered vocal separation, professional-grade online mastering, text-to-music generation, vocal simulation, and audio-video conversion.");
+
+      } else if (command.includes("what features do you have")) {
+        speak("SoundWAVs provides features like AI-powered vocal separation, professional-grade online mastering, text-to-music generation, vocal simulation, and audio-video conversion.");
+      } else if (command.includes("what are the features you have")) {
+        speak("SoundWAVs provides features like AI-powered vocal separation, professional-grade online mastering, text-to-music generation, vocal simulation, and audio-video conversion.");
+
+      } else if (command.includes("Is it free to use")) {
+        speak("Sound Waves offers free usage with limitations we do on a daily basis.");
+      } else if (command.includes("Is it free")) {
+        speak("Sound Waves offers free usage with limitations we do on a daily basis.");
+      } else if (command.includes("Is it payment only")) {
+        speak("Sound Waves offers free usage with limitations we do on a daily basis.");
+
+      } else if (command.includes("what is the price")) {
+        speak("Please command me to click the pricing page for more info");
+      } else if (command.includes("what is the pricing")) {
+        speak("Please command me to click the pricing page for more info");
+      } else if (command.includes("how much is it")) {
+        speak("Please command me to click the pricing page for more info");
+      } else if (command.includes("how much does it cost")) {
+        speak("Please command me to click the pricing page for more info");
+
+         } else if (command.includes("hi")) {
+        speak("hi, provide commands relating to the website navigations or anything related to sound waves");
+        } else if (command.includes("hello")) {
+        speak("hi, provide commands relating to the website navigations or anything related to sound waves");
+        } else if (command.includes("how are you")) {
+        speak("hi, provide commands relating to the website navigations or anything related to sound waves");
+        } else if (command.includes("good day")) {
+        speak("hi, provide commands relating to the website navigations or anything related to sound waves");
+        } else if (command.includes("good morning")) {
+        speak("hi, provide commands relating to the website navigations or anything related to sound waves");
+      } else if (command.includes("are you there")) {
+        speak("please provide commands relating to the website navigations or anything related to sound waves");
+      } else if (command.includes("what can you do")) {
+        speak("provide commands relating to the website navigations or anything related to sound waves");
+
+
+        } else if (command.includes("how can you help")) {
+        speak("provide commands relating to the website navigations or anything related to sound waves");
+
+        } else if (command.includes("what are the commands")) {
+        speak("the commands are anything relating to the website navigations or anything related to sound waves");
+        } else if (command.includes("what are commands can i make")) {
+        speak("the commands are anything relating to the website navigations or anything related to sound waves");
+        } else if (command.includes("give me the commands")) {
+        speak("the commands are anything relating to the website navigations or anything related to sound waves");
+      } else if (command.includes("i dont know what to say")) {
+        speak("the commands are anything relating to the website navigations or anything related to sound waves");
+
+
+
+
+
+    } else {
+        const responses = [
+        "Command not found. Please try again.",
+            "Command not found. Please try a feature-related request.",
+            "I didn't catch that. You can ask about Sound Waves features or say 'open about'.",
+            "That command isn't recognized. Try asking about what we offer.",
+            "I can help you navigate the site or explain SoundWAVs features. What would you like to know?",
+            "Command not found. Please try to say click sign up button.",
+        ];
+        const randomResponse = responses[Math.floor(Math.random() * responses.length)];
+        speak(randomResponse);
+    }
+}
+
+function speak(text) {
+    if ('speechSynthesis' in window) {
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.voice = getFemaleVoice();
+        utterance.rate = 1;
+        utterance.pitch = 1;
+        speechSynthesis.speak(utterance);
+    } else {
+        alert(text);
+    }
+}
+
+function getFemaleVoice() {
+    const voices = speechSynthesis.getVoices();
+    return voices.find(voice => voice.name.includes("Female") || voice.lang.includes("en-US")) || voices[0];
+}
+
+window.speechSynthesis.onvoiceschanged = () => {
+    console.log("Voices loaded:", speechSynthesis.getVoices());
+};
+
+    </script>
+
+
+</body>
+</html>
